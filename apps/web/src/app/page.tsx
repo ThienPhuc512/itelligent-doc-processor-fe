@@ -1,12 +1,12 @@
+import { UploadPanel } from "@/components/UploadPanel";
+import { ChatInput } from "@/components/ChatInput";
+
 export default function Home() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold text-gray-900">
-        Welcome to Intelligent Doc Processor
-      </h1>
-      <p className="mt-4 text-gray-600">
-        AI-powered document processing platform
-      </p>
+    <div className="flex min-h-[calc(100vh-73px)] flex-col">
+      <UploadPanel />
+      <div className="flex-1" />
+      <ChatInput />
     </div>
   )
 }
