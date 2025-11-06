@@ -8,6 +8,7 @@ export function Header() {
                         <ul className="flex gap-4">
                             <li>Documents</li>
                             <li>Dashboard</li>
+                            <h1>Hello, {user.name}</h1>
                         </ul>
                     </nav>
                 </div>
