@@ -1,9 +1,10 @@
 "use client"
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { BarChart3, FileText, LogIn, MessageSquare, User } from "lucide-react"
+import { CommandPaletteTrigger } from "@/components/ui/CommandPalette"
+import { BarChart3, FileText, LogIn, MessageSquare } from "lucide-react"
 import Link from "next/link"
+import { UserMenu } from "./UserMenu"
 
 export function Header() {
     // TODO: Replace with actual auth state
@@ -18,6 +19,7 @@ export function Header() {
                 
                 {isAuthenticated ? (
                     <nav className="hidden md:flex items-center gap-6">
+                        <CommandPaletteTrigger />
                         <Link 
                             href="/chat" 
                             className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -39,13 +41,13 @@ export function Header() {
                             <BarChart3 className="h-4 w-4" />
                             Dashboard
                         </Link>
-                        <div className="flex items-center gap-4">
-                            <Avatar className="h-8 w-8">
-                                <AvatarFallback>
-                                    <User className="h-4 w-4" />
-                                </AvatarFallback>
-                            </Avatar>
-                        </div>
+                        <UserMenu
+                            user={{
+                                name: "John Doe",
+                                email: "john@example.com",
+                            }}
+                            onSignOut={() => console.log("Sign out")}
+                        />
                     </nav>
                 ) : (
                     <nav className="flex items-center gap-4">

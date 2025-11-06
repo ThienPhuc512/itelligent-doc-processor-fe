@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileText, MessageSquare, Zap, Search } from "lucide-react"
+import { FileText, MessageSquare, Zap, Search, Sparkles, Shield, Rocket } from "lucide-react"
 
 export default function Home() {
   return (
@@ -33,9 +33,9 @@ export default function Home() {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <Card>
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>RAG Chat Interface</CardTitle>
@@ -50,9 +50,9 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Search className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>Context-Aware Search</CardTitle>
@@ -62,14 +62,50 @@ export default function Home() {
             </CardHeader>
           </Card>
 
-          <Card>
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <CardHeader>
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
               <CardTitle>Real-time Processing</CardTitle>
               <CardDescription>
                 Fast document processing with streaming responses
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <Sparkles className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle>AI-Powered Insights</CardTitle>
+              <CardDescription>
+                Get intelligent insights and summaries from your documents
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle>Secure & Private</CardTitle>
+              <CardDescription>
+                Enterprise-grade security with end-to-end encryption
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <Rocket className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle>Lightning Fast</CardTitle>
+              <CardDescription>
+                Optimized performance for instant document processing
               </CardDescription>
             </CardHeader>
           </Card>
