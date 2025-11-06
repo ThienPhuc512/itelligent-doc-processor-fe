@@ -1,13 +1,13 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { MessageBubble, Message } from "./MessageBubble"
-import { ContextPanel, DocumentSource } from "./ContextPanel"
-import { ChatInput } from "./ChatInput"
 import { Button } from "@/components/ui/button"
-import { PanelRightClose, PanelRightOpen } from "lucide-react"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
+import { PanelRightClose, PanelRightOpen } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { ChatInput } from "./ChatInput"
+import { ContextPanel, DocumentSource } from "./ContextPanel"
+import { Message, MessageBubble } from "./MessageBubble"
 
 interface RAGChatProps {
   initialMessages?: Message[]
@@ -87,7 +87,7 @@ Would you like me to elaborate on any specific aspect?`,
         }))
         setSources(newSources)
         if (newSources.length > 0) {
-          setSelectedSource(newSources[0])
+          setSelectedSource(newSources[0] || null)
         }
       }
 
