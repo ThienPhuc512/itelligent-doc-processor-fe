@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { CommandPaletteTrigger } from "@/components/ui/CommandPalette"
 import { BarChart3, FileText, LogIn, MessageSquare } from "lucide-react"
 import Link from "next/link"
+import { Logo } from "./Logo"
 import { UserMenu } from "./UserMenu"
 
 export function Header() {
@@ -13,9 +14,7 @@ export function Header() {
     return (
         <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
             <div className="container mx-auto flex items-center justify-between py-4 px-4">
-                <Link href="/" className="text-xl font-bold hover:opacity-80 transition-opacity">
-                    Intelligent Doc Processor
-                </Link>
+                <Logo />
                 
                 {isAuthenticated ? (
                     <nav className="hidden md:flex items-center gap-6">
